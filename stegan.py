@@ -1,5 +1,5 @@
 from PIL import Image
-def Encode(img, msg, lst):
+def Encode(img, msg, lst): #image,plaintext,X
     global L
     L = []
     length=len(msg)
@@ -12,9 +12,9 @@ def Encode(img, msg, lst):
     # Making deep copy of image to make encryption! with original image intact
     encoded_img = img.copy()
     width, height = img.size
-    index = 0
-    for row in range(height):
-        for col in range(width):
+    index = 0 #1
+    for row in range(height): #0
+        for col in range(width): #1x
             r, g, b = img.getpixel((col, row))
             if row == 0 and col == 0 and index < length:
                 asc = length

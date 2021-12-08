@@ -71,36 +71,3 @@ def decode(image_name):
         if decoded_data[-5:] == "=====":
             break
     return decoded_data[:-5]
-
-"""if __name__ == "__main__":
-    print("To encrypt a message with the current key, type 'Encrypt'")
-    print("To decrypt a message with the current key, type 'Decrypt'")
-    print("Type quit to exit")
-    print('\n')
-    choice = str()
-    while choice != 'quit':
-        choice = input("Enter Command: ")
-        if choice.lower() == 'encrypt':
-            plain_image = input("Enter File Path: ")
-            cipher_image = input("Enter the name with which the File is to be Saved: ")
-            code_message=input("Enter the secret message: ")
-            encoded_image = encode(image_name=plain_image,code_message=code_message)
-            cv2.imwrite(cipher_image, encoded_image)
-            print("\n")
-        elif choice.lower() == 'decrypt':
-            decoded_data = decode(cipher_image)
-            print("Decoded data:", decoded_data)
-            print("\n")
-
-        elif choice.lower() == 'help':
-            print("To encrypt a message with the current key, type 'Encrypt'")
-            print("To decrypt a message with the current key, type 'Decrypt'")
-            print("Type quit to exit")
-            print("Type help for menu")
-            print('\n')
-
-        else:
-            if choice != 'quit':
-                ii = random.randint(0, 6)
-                statements = ["Oops! Something went wrong", "Please read the directions again", "Didnt say the right word", "This input is UNACCEPTABLE!!","Was that even a word???", "Please follow the directions", "Just type 'help' if you are really that lost"]
-                print(statements[ii])"""

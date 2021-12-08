@@ -66,11 +66,15 @@ while option != 'quit':
                     if	e1<= 2 or gcd(phi(n),e1)!=1:
                         print('Invalid input')
                     else :
+                        
                         e=e1
+                        d1 = modInverse(e,phi(n))
+                        d=d1
                         print('e set to :', e)
+                        print('d set to :', d)
                 except ValueError:
                     print('please enter a number')
-            elif mm.lower() == 'd':
+                '''elif mm.lower() == 'd':
                 try:
                     print('current d = ', d)
                     d1 = int(input(" Enter a value for d :"))
@@ -80,7 +84,7 @@ while option != 'quit':
                         d=d1
                         print('d set to :',d)
                 except ValueError:
-                    print('please enter a number')
+                    print('please enter a number')'''
             else:
                 if mm != 'back':
                     ii = random.randint(0, 6)
